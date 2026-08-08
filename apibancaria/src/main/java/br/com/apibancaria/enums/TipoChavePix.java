@@ -1,4 +1,4 @@
-package br.com.apibancaria.model;
+package br.com.apibancaria.enums;
 
 public enum TipoChavePix {
 

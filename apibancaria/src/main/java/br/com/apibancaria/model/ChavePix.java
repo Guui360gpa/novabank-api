@@ -1,5 +1,6 @@
 package br.com.apibancaria.model;
 
+import br.com.apibancaria.enums.TipoChavePix;
 import jakarta.persistence.*;
 
 import java.time.LocalDateTime;
@@ -28,4 +29,41 @@ public class ChavePix {
     @JoinColumn(name = "conta_id")
     private Conta conta;
 
+
+    public Long getId() {
+        return id;
+    }
+    public void setId(Long id) {
+        this.id = id;
+    }
+    public TipoChavePix getTipo() {
+        return tipo;
+    }
+    public void setTipo(TipoChavePix tipo) {
+        this.tipo = tipo;
+    }
+    public String getChave() {
+        return chave;
+    }
+    public void setChave(String chave) {
+        this.chave = chave;
+    }
+    public Boolean getAtiva() {
+        return ativa;
+    }
+    public void setAtiva(Boolean ativa) {
+        this.ativa = ativa;
+    }
+    public LocalDateTime getDataCadastro() {
+        return dataCadastro;
+    }
+    public void setDataCadastro(LocalDateTime dataCadastro) {
+        this.dataCadastro = dataCadastro;
+    }
+    public Conta getConta() {
+        return conta;
+    }
+    public void setConta(Conta conta) {
+        this.conta = conta;
+    }
 }

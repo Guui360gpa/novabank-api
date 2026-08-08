@@ -1,5 +1,6 @@
 package br.com.apibancaria.model;
 
+import br.com.apibancaria.enums.TipoTransacao;
 import jakarta.persistence.*;
 
 import java.math.BigDecimal;
@@ -39,4 +40,59 @@ public class Transacao {
     @Column(name = "saldo_posterior",nullable = false)
     private BigDecimal saldoPosterior;
 
+
+    public Long getId() {
+        return id;
+    }
+    public void setId(Long id) {
+        this.id = id;
+    }
+    public TipoTransacao getTipo() {
+        return tipo;
+    }
+    public void setTipo(TipoTransacao tipo) {
+        this.tipo = tipo;
+    }
+    public BigDecimal getValor() {
+        return valor;
+    }
+    public void setValor(BigDecimal valor) {
+        this.valor = valor;
+    }
+    public LocalDateTime getDataHora() {
+        return dataHora;
+    }
+    public void setDataHora(LocalDateTime dataHora) {
+        this.dataHora = dataHora;
+    }
+    public String getDescricao() {
+        return descricao;
+    }
+    public void setDescricao(String descricao) {
+        this.descricao = descricao;
+    }
+    public Conta getContaOrigem() {
+        return contaOrigem;
+    }
+    public void setContaOrigem(Conta contaOrigem) {
+        this.contaOrigem = contaOrigem;
+    }
+    public Conta getContaDestino() {
+        return contaDestino;
+    }
+    public void setContaDestino(Conta contaDestino) {
+        this.contaDestino = contaDestino;
+    }
+    public BigDecimal getSaldoAnterior() {
+        return saldoAnterior;
+    }
+    public void setSaldoAnterior(BigDecimal saldoAnterior) {
+        this.saldoAnterior = saldoAnterior;
+    }
+    public BigDecimal getSaldoPosterior() {
+        return saldoPosterior;
+    }
+    public void setSaldoPosterior(BigDecimal saldoPosterior) {
+        this.saldoPosterior = saldoPosterior;
+    }
 }
