@@ -9,7 +9,6 @@ import br.com.apibancaria.exception.EmailJaCadastradoException;
 import br.com.apibancaria.model.Cliente;
 import br.com.apibancaria.repository.ClienteRepository;
 import jakarta.transaction.Transactional;
-import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
