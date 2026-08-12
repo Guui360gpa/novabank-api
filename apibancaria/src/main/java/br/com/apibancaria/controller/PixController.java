@@ -42,7 +42,7 @@ public class PixController {
     }
 
     @GetMapping("/chaves")
-    public ResponseEntity<List<ChavePixResponse>> listarChaves(@RequestParam(required = false) Long id){
+    public ResponseEntity<List<ChavePixResponse>> listarChaves(@RequestParam Long id){
         List<ChavePixResponse> chaves = service.listar(id);
 
         return ResponseEntity.ok(chaves);

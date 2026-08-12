@@ -3,7 +3,6 @@ package br.com.apibancaria.controller;
 
 import br.com.apibancaria.dto.request.DepositoRequest;
 import br.com.apibancaria.dto.request.SaqueRequest;
-import br.com.apibancaria.dto.response.ExtratoResponse;
 import br.com.apibancaria.dto.response.TransacaoResponse;
 import br.com.apibancaria.service.TransacaoService;
 import jakarta.validation.Valid;
@@ -11,6 +10,8 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 @RestController
 @RequestMapping("/contas")
@@ -34,9 +35,9 @@ public class TransacaoController {
     }
 
     @GetMapping("/{id}/extrato")
-    public ResponseEntity<ExtratoResponse> extrato(@PathVariable Long id){
-        ExtratoResponse extratoResponse = service.extrato(id);
+    public ResponseEntity<List<TransacaoResponse>> extrato(@PathVariable Long id){
+        List<TransacaoResponse> transacoesResponse = service.extrato(id);
 
-        return ResponseEntity.ok(extratoResponse);
+        return ResponseEntity.ok(transacoesResponse);
     }
 }

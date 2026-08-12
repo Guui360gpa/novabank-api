@@ -2,16 +2,15 @@ package br.com.apibancaria.service;
 
 import br.com.apibancaria.dto.response.ContaResponse;
 import br.com.apibancaria.enums.StatusConta;
+import br.com.apibancaria.exception.ContaNaoEncontradaException;
 import br.com.apibancaria.model.Cliente;
 import br.com.apibancaria.model.Conta;
 import br.com.apibancaria.repository.ContaRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
-
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
 import java.util.List;
-import java.util.Random;
 import java.util.concurrent.ThreadLocalRandom;
 
 @Service
@@ -44,8 +43,29 @@ public class ContaService {
 
 
     public List<ContaResponse> listar() {
+        List<Conta> contas = contaRepository.findAll();
+        return contas.stream()
+                .map(c -> new ContaResponse(c.getId(),
+                        c.getNumeroConta(),
+                        c.getAgencia(),
+                        c.getSaldo(),
+                        c.getStatus(),
+                        c.getDataCriacao()))
+                .toList();
     }
 
     public ContaResponse buscarPorId(Long id) {
+        Conta conta = contaRepository.findById(id)
+                .orElseThrow(() ->
+                        new ContaNaoEncontradaException("A conta não foi encontrada!"));
+
+        return new ContaResponse(
+                conta.getId(),
+                conta.getNumeroConta(),
+                conta.getAgencia(),
+                conta.getSaldo(),
+                conta.getStatus(),
+                conta.getDataCriacao()
+        );
     }
 }

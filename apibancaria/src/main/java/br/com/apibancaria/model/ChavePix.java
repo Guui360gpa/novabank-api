@@ -29,6 +29,13 @@ public class ChavePix {
     @JoinColumn(name = "conta_id")
     private Conta conta;
 
+    public ChavePix(TipoChavePix tipo, String chave,Conta conta) {
+        this.tipo = tipo;
+        this.chave = chave;
+        this.ativa = true;
+        this.dataCadastro = LocalDateTime.now();
+        this.conta = conta;
+    }
 
     public Long getId() {
         return id;

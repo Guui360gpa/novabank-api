@@ -40,6 +40,18 @@ public class Transacao {
     @Column(name = "saldo_posterior",nullable = false)
     private BigDecimal saldoPosterior;
 
+    public Transacao(TipoTransacao tipo, BigDecimal valor, LocalDateTime dataHora, String descricao, Conta contaOrigem, Conta contaDestino, BigDecimal saldoAnterior, BigDecimal saldoPosterior) {
+        this.tipo = tipo;
+        this.valor = valor;
+        this.dataHora = dataHora;
+        this.descricao = descricao;
+        this.contaOrigem = contaOrigem;
+        this.contaDestino = contaDestino;
+        this.saldoAnterior = saldoAnterior;
+        this.saldoPosterior = saldoPosterior;
+    }
+
+    public Transacao() {}
 
     public Long getId() {
         return id;
