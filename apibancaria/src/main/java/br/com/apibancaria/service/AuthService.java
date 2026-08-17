@@ -5,12 +5,10 @@ import br.com.apibancaria.dto.response.LoginResponse;
 import br.com.apibancaria.exception.CredenciaisInvalidasException;
 import br.com.apibancaria.model.Cliente;
 import br.com.apibancaria.repository.ClienteRepository;
-import jakarta.validation.Valid;
+import br.com.apibancaria.security.JwtService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
-
-import javax.swing.undo.CannotRedoException;
 
 @Service
 @RequiredArgsConstructor
@@ -21,7 +19,7 @@ public class AuthService {
     private final JwtService jwtService;
 
 
-    public LoginResponse login(@Valid LoginRequest dto) {
+    public LoginResponse login(LoginRequest dto) {
         Cliente cliente = clienteRepository.findByEmail(dto.email())
                 .orElseThrow(() -> new CredenciaisInvalidasException("Email ou Senha inválido(s) !"));
 

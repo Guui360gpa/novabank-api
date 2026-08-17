@@ -29,7 +29,7 @@ public class Cliente {
     @Column(name = "data_nascimento", nullable = false, length = 10)
     private LocalDate dataNascimento;
 
-    @Column(name = "senha", nullable = false, length = 8, unique = true)
+    @Column(name = "senha", nullable = false, length = 100)
     private String senha;
 
     @OneToOne(cascade = CascadeType.ALL)

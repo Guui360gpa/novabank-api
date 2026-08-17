@@ -37,6 +37,8 @@ public class ChavePix {
         this.conta = conta;
     }
 
+    public ChavePix() {}
+
     public Long getId() {
         return id;
     }
