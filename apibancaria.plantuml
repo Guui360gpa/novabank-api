@@ -1,0 +1,421 @@
+@startuml
+
+title __APIBANCARIA's Class Diagram__\n
+
+  namespace br.com.apibancaria {
+    class br.com.apibancaria.ApibancariaApplication {
+    }
+  }
+  
+
+  namespace br.com.apibancaria {
+    namespace controller {
+      class br.com.apibancaria.controller.AuthController {
+      }
+    }
+  }
+  
+
+  namespace br.com.apibancaria {
+    namespace controller {
+      class br.com.apibancaria.controller.ClienteController {
+      }
+    }
+  }
+  
+
+  namespace br.com.apibancaria {
+    namespace controller {
+      class br.com.apibancaria.controller.ContaController {
+      }
+    }
+  }
+  
+
+  namespace br.com.apibancaria {
+    namespace controller {
+      class br.com.apibancaria.controller.PixController {
+      }
+    }
+  }
+  
+
+  namespace br.com.apibancaria {
+    namespace controller {
+      class br.com.apibancaria.controller.TransacaoController {
+      }
+    }
+  }
+  
+
+  namespace br.com.apibancaria {
+    namespace dto.request {
+      class br.com.apibancaria.dto.request.ChavePixRequest {
+      }
+    }
+  }
+  
+
+  namespace br.com.apibancaria {
+    namespace dto.request {
+      class br.com.apibancaria.dto.request.ClienteRequest {
+      }
+    }
+  }
+  
+
+  namespace br.com.apibancaria {
+    namespace dto.request {
+      class br.com.apibancaria.dto.request.DepositoRequest {
+      }
+    }
+  }
+  
+
+  namespace br.com.apibancaria {
+    namespace dto.request {
+      class br.com.apibancaria.dto.request.LoginRequest {
+      }
+    }
+  }
+  
+
+  namespace br.com.apibancaria {
+    namespace dto.request {
+      class br.com.apibancaria.dto.request.PixRequest {
+      }
+    }
+  }
+  
+
+  namespace br.com.apibancaria {
+    namespace dto.request {
+      class br.com.apibancaria.dto.request.SaqueRequest {
+      }
+    }
+  }
+  
+
+  namespace br.com.apibancaria {
+    namespace dto.response {
+      class br.com.apibancaria.dto.response.ChavePixResponse {
+      }
+    }
+  }
+  
+
+  namespace br.com.apibancaria {
+    namespace dto.response {
+      class br.com.apibancaria.dto.response.ClienteResponse {
+      }
+    }
+  }
+  
+
+  namespace br.com.apibancaria {
+    namespace dto.response {
+      class br.com.apibancaria.dto.response.ContaResponse {
+      }
+    }
+  }
+  
+
+  namespace br.com.apibancaria {
+    namespace dto.response {
+      class br.com.apibancaria.dto.response.LoginResponse {
+      }
+    }
+  }
+  
+
+  namespace br.com.apibancaria {
+    namespace dto.response {
+      class br.com.apibancaria.dto.response.TransacaoResponse {
+      }
+    }
+  }
+  
+
+  namespace br.com.apibancaria {
+    namespace enums {
+      enum StatusCliente {
+      }
+    }
+  }
+  
+
+  namespace br.com.apibancaria {
+    namespace enums {
+      enum StatusConta {
+      }
+    }
+  }
+  
+
+  namespace br.com.apibancaria {
+    namespace enums {
+      enum TipoChavePix {
+      }
+    }
+  }
+  
+
+  namespace br.com.apibancaria {
+    namespace enums {
+      enum TipoTransacao {
+      }
+    }
+  }
+  
+
+  namespace br.com.apibancaria {
+    namespace exception {
+      class br.com.apibancaria.exception.ChavePixJaCadastradaException {
+      }
+    }
+  }
+  
+
+  namespace br.com.apibancaria {
+    namespace exception {
+      class br.com.apibancaria.exception.ChavePixNaoEncontradaException {
+      }
+    }
+  }
+  
+
+  namespace br.com.apibancaria {
+    namespace exception {
+      class br.com.apibancaria.exception.ClienteNaoEncontradoException {
+      }
+    }
+  }
+  
+
+  namespace br.com.apibancaria {
+    namespace exception {
+      class br.com.apibancaria.exception.ContaInativaException {
+      }
+    }
+  }
+  
+
+  namespace br.com.apibancaria {
+    namespace exception {
+      class br.com.apibancaria.exception.ContaNaoEncontradaException {
+      }
+    }
+  }
+  
+
+  namespace br.com.apibancaria {
+    namespace exception {
+      class br.com.apibancaria.exception.CpfJaCadastradoException {
+      }
+    }
+  }
+  
+
+  namespace br.com.apibancaria {
+    namespace exception {
+      class br.com.apibancaria.exception.CredenciaisInvalidasException {
+      }
+    }
+  }
+  
+
+  namespace br.com.apibancaria {
+    namespace exception {
+      class br.com.apibancaria.exception.EmailJaCadastradoException {
+      }
+    }
+  }
+  
+
+  namespace br.com.apibancaria {
+    namespace exception {
+      class br.com.apibancaria.exception.SaldoInsuficienteException {
+      }
+    }
+  }
+  
+
+  namespace br.com.apibancaria {
+    namespace exception {
+      class br.com.apibancaria.exception.TransferenciaParaSiMesmoException {
+      }
+    }
+  }
+  
+
+  namespace br.com.apibancaria {
+    namespace model {
+      class br.com.apibancaria.model.ChavePix {
+      }
+    }
+  }
+  
+
+  namespace br.com.apibancaria {
+    namespace model {
+      class br.com.apibancaria.model.Cliente {
+      }
+    }
+  }
+  
+
+  namespace br.com.apibancaria {
+    namespace model {
+      class br.com.apibancaria.model.Conta {
+      }
+    }
+  }
+  
+
+  namespace br.com.apibancaria {
+    namespace model {
+      class br.com.apibancaria.model.Transacao {
+      }
+    }
+  }
+  
+
+  namespace br.com.apibancaria {
+    namespace repository {
+      interface br.com.apibancaria.repository.ChavePixRepository {
+      }
+    }
+  }
+  
+
+  namespace br.com.apibancaria {
+    namespace repository {
+      interface br.com.apibancaria.repository.ClienteRepository {
+      }
+    }
+  }
+  
+
+  namespace br.com.apibancaria {
+    namespace repository {
+      interface br.com.apibancaria.repository.ContaRepository {
+      }
+    }
+  }
+  
+
+  namespace br.com.apibancaria {
+    namespace repository {
+      interface br.com.apibancaria.repository.TransacaoRepository {
+      }
+    }
+  }
+  
+
+  namespace br.com.apibancaria {
+    namespace security {
+      class br.com.apibancaria.security.JwtAuthenticationFilter {
+      }
+    }
+  }
+  
+
+  namespace br.com.apibancaria {
+    namespace security {
+      class br.com.apibancaria.security.JwtService {
+      }
+    }
+  }
+  
+
+  namespace br.com.apibancaria {
+    namespace security {
+      class br.com.apibancaria.security.SecurityConfig {
+      }
+    }
+  }
+  
+
+  namespace br.com.apibancaria {
+    namespace service {
+      class br.com.apibancaria.service.AuthService {
+      }
+    }
+  }
+  
+
+  namespace br.com.apibancaria {
+    namespace service {
+      class br.com.apibancaria.service.ClienteService {
+      }
+    }
+  }
+  
+
+  namespace br.com.apibancaria {
+    namespace service {
+      class br.com.apibancaria.service.ContaService {
+      }
+    }
+  }
+  
+
+  namespace br.com.apibancaria {
+    namespace service {
+      class br.com.apibancaria.service.PixService {
+      }
+    }
+  }
+  
+
+  namespace br.com.apibancaria {
+    namespace service {
+      class br.com.apibancaria.service.TransacaoService {
+      }
+    }
+  }
+  
+
+  br.com.apibancaria.ApibancariaApplication .up.|> org.springframework.boot.CommandLineRunner
+  br.com.apibancaria.controller.AuthController o-- br.com.apibancaria.service.AuthService : service
+  br.com.apibancaria.controller.ClienteController o-- br.com.apibancaria.service.ClienteService : service
+  br.com.apibancaria.controller.ContaController o-- br.com.apibancaria.service.ContaService : service
+  br.com.apibancaria.controller.PixController o-- br.com.apibancaria.service.PixService : service
+  br.com.apibancaria.controller.TransacaoController o-- br.com.apibancaria.service.TransacaoService : service
+  br.com.apibancaria.dto.request.ChavePixRequest o-- br.com.apibancaria.enums.TipoChavePix : tipo
+  br.com.apibancaria.dto.response.ChavePixResponse o-- br.com.apibancaria.enums.TipoChavePix : tipo
+  br.com.apibancaria.dto.response.ContaResponse o-- br.com.apibancaria.enums.StatusConta : status
+  br.com.apibancaria.dto.response.TransacaoResponse o-- br.com.apibancaria.enums.TipoTransacao : tipo
+  br.com.apibancaria.model.ChavePix o-- br.com.apibancaria.model.Conta : conta
+  br.com.apibancaria.model.ChavePix o-- br.com.apibancaria.enums.TipoChavePix : tipo
+  br.com.apibancaria.model.Cliente o-- br.com.apibancaria.model.Conta : conta
+  br.com.apibancaria.model.Cliente o-- br.com.apibancaria.enums.StatusCliente : status
+  br.com.apibancaria.model.Conta o-- br.com.apibancaria.model.Cliente : cliente
+  br.com.apibancaria.model.Conta o-- br.com.apibancaria.enums.StatusConta : status
+  br.com.apibancaria.model.Transacao o-- br.com.apibancaria.model.Conta : contaDestino
+  br.com.apibancaria.model.Transacao o-- br.com.apibancaria.model.Conta : contaOrigem
+  br.com.apibancaria.model.Transacao o-- br.com.apibancaria.enums.TipoTransacao : tipo
+  br.com.apibancaria.security.JwtAuthenticationFilter -up-|> org.springframework.web.filter.OncePerRequestFilter
+  br.com.apibancaria.security.JwtAuthenticationFilter o-- br.com.apibancaria.repository.ClienteRepository : clienteRepository
+  br.com.apibancaria.security.JwtAuthenticationFilter o-- br.com.apibancaria.security.JwtService : service
+  br.com.apibancaria.security.SecurityConfig o-- br.com.apibancaria.security.JwtAuthenticationFilter : jwtAuthenticationFilter
+  br.com.apibancaria.service.AuthService o-- br.com.apibancaria.repository.ClienteRepository : clienteRepository
+  br.com.apibancaria.service.AuthService o-- br.com.apibancaria.security.JwtService : jwtService
+  br.com.apibancaria.service.ClienteService o-- br.com.apibancaria.repository.ClienteRepository : clienteRepository
+  br.com.apibancaria.service.ClienteService o-- br.com.apibancaria.service.ContaService : contaService
+  br.com.apibancaria.service.ContaService o-- br.com.apibancaria.repository.ContaRepository : contaRepository
+  br.com.apibancaria.service.PixService o-- br.com.apibancaria.repository.ChavePixRepository : chavePixRepository
+  br.com.apibancaria.service.PixService o-- br.com.apibancaria.repository.ContaRepository : contaRepository
+  br.com.apibancaria.service.PixService o-- br.com.apibancaria.repository.TransacaoRepository : transacaoRepository
+  br.com.apibancaria.service.TransacaoService o-- br.com.apibancaria.repository.ContaRepository : contaRepository
+  br.com.apibancaria.service.TransacaoService o-- br.com.apibancaria.repository.TransacaoRepository : transacaoRepository
+
+
+right footer
+
+
+PlantUML diagram generated by SketchIt! (https://bitbucket.org/pmesmeur/sketch.it)
+For more information about this tool, please contact philippe.mesmeur@gmail.com
+endfooter
+
+@enduml
