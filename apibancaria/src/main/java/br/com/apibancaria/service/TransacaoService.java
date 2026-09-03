@@ -12,7 +12,7 @@ import br.com.apibancaria.model.Conta;
 import br.com.apibancaria.model.Transacao;
 import br.com.apibancaria.repository.ContaRepository;
 import br.com.apibancaria.repository.TransacaoRepository;
-import jakarta.transaction.Transactional;
+import org.springframework.transaction.annotation.Transactional;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
