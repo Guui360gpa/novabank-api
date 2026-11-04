@@ -4,6 +4,7 @@ import br.com.apibancaria.dto.request.ClienteRequest;
 import br.com.apibancaria.dto.response.ClienteResponse;
 import br.com.apibancaria.exception.ClienteNaoEncontradoException;
 import br.com.apibancaria.service.ClienteService;
+import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
@@ -15,6 +16,7 @@ import java.util.List;
 @RestController
 @RequestMapping("/clientes")
 @RequiredArgsConstructor
+@SecurityRequirement(name = "bearer-key")
 public class ClienteController {
 
 

@@ -5,6 +5,7 @@ import br.com.apibancaria.dto.request.DepositoRequest;
 import br.com.apibancaria.dto.request.SaqueRequest;
 import br.com.apibancaria.dto.response.TransacaoResponse;
 import br.com.apibancaria.service.TransacaoService;
+import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
@@ -16,6 +17,7 @@ import java.util.List;
 @RestController
 @RequestMapping("/contas")
 @RequiredArgsConstructor
+@SecurityRequirement(name = "bearer-key")
 public class TransacaoController {
 
     private final TransacaoService service;

@@ -6,6 +6,7 @@ import br.com.apibancaria.dto.request.PixRequest;
 import br.com.apibancaria.dto.response.ChavePixResponse;
 import br.com.apibancaria.dto.response.TransacaoResponse;
 import br.com.apibancaria.service.PixService;
+import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
@@ -17,6 +18,7 @@ import java.util.List;
 @RestController
 @RequestMapping("/pix")
 @RequiredArgsConstructor
+@SecurityRequirement(name = "bearer-key")
 public class PixController {
 
     private final PixService service;

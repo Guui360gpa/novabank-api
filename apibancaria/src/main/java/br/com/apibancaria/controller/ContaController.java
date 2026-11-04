@@ -2,6 +2,7 @@ package br.com.apibancaria.controller;
 
 import br.com.apibancaria.dto.response.ContaResponse;
 import br.com.apibancaria.service.ContaService;
+import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -14,6 +15,7 @@ import java.util.List;
 @RestController
 @RequestMapping("/contas")
 @RequiredArgsConstructor
+@SecurityRequirement(name = "bearer-key")
 public class ContaController {
 
     private final ContaService service;
